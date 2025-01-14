@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "poetry add streamlit pandas phonenumbers"
+version = "0.1.0"
+description = ""
+authors = ["nirmalessbee <nirmalessbee@outlook.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+streamlit = "^1.41.1"
+pandas = "^2.2.3"
+phonenumbers = "^8.13.52"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
