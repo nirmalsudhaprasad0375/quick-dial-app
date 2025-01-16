@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Place a Call</title>
+<script>
+
+        function placeCall() {
+
+            // Get the last three digits input
+
+            const lastThreeDigits = document.getElementById('lastThreeDigits').value;
+ 
+            // Validate the input to ensure it is exactly three digits
+
+            if (!/^[0-9]{3}$/.test(lastThreeDigits)) {
+
+                alert('Please enter exactly three digits.');
+
+                return;
+
+            }
+ 
+            // Combine the base number with the last three digits
+
+            const fullNumber = `8137001${lastThreeDigits}`;
+ 
+            // Redirect to the tel: URL to initiate a call
+
+            window.location.href = `tel:${fullNumber}`;
+
+        }
+</script>
+</head>
+<body>
+<h1>Place a Call</h1>
+<p>Enter the last three digits of the phone number:</p>
+<input type="text" id="lastThreeDigits" maxlength="3" placeholder="Last 3 digits">
+<button onclick="placeCall()">Call</button>
+</body>
+</html>
+ 
